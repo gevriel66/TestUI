@@ -47,10 +47,13 @@ do
     ThemeManager.Library = nil
     ThemeManager.AppliedToTab = false
     ThemeManager.BuiltInThemes = {
+        -- // EDIT BY GUA // --
+        -- Ganti AccentColor dari ungu jadi Hijau Neon (00ff88)
         ["Default"] = {
             1,
-            { FontColor = "ffffff", MainColor = "191919", AccentColor = "7d55ff", BackgroundColor = "0f0f0f", OutlineColor = "282828" },
+            { FontColor = "ffffff", MainColor = "191919", AccentColor = "00ff88", BackgroundColor = "0f0f0f", OutlineColor = "282828" },
         },
+        -- // ---------------- // --
         ["BBot"] = {
             2,
             { FontColor = "ffffff", MainColor = "1e1e1e", AccentColor = "7e48a3", BackgroundColor = "232323", OutlineColor = "141414" },
@@ -118,7 +121,13 @@ do
         ["Material"] = {
             18,
             { FontColor = "eeffff", MainColor = "212121", AccentColor = "82aaff", BackgroundColor = "151515", OutlineColor = "424242" },
-        }
+        },
+        -- // TAMBAHAN PRESET BARU // --
+        ["GLua Exclusive"] = {
+            19, -- Urutan ke 19
+            { FontColor = "ffffff", MainColor = "101010", AccentColor = "00aaff", BackgroundColor = "050505", OutlineColor = "202020" },
+        },
+        -- // ------------------------- // --
     }
 
     function ThemeManager:SetLibrary(library)
