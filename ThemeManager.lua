@@ -120,13 +120,13 @@ do
             { FontColor = "eeffff", MainColor = "212121", AccentColor = "82aaff", BackgroundColor = "151515", OutlineColor = "424242" },
         },
         ["GLua Dark"] = {
-            19, -- nomor urut (pastikan unik)
+            19,
             { 
-                FontColor = "ffffff", 
-                MainColor = "1a1a2e", 
-                AccentColor = "e94560",
-                BackgroundColor = "16213e", 
-                OutlineColor = "0f3460" 
+                FontColor = "f0f0f0", 
+                MainColor = "1e1b2e", 
+                AccentColor = "9d4edd",
+                BackgroundColor = "13111c", 
+                OutlineColor = "2d2a3e" 
             },
         }
     }
