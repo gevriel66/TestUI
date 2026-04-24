@@ -7354,7 +7354,6 @@ function Library:CreateWindow(WindowInfo)
 
             local TabboxHolder
             local TabboxButtons
-            local CollapseBtn
 
             do
                 TabboxHolder = New("Frame", {
@@ -7381,31 +7380,6 @@ function Library:CreateWindow(WindowInfo)
                     HorizontalFlex = Enum.UIFlexAlignment.Fill,
                     Parent = TabboxButtons,
                 })
-
-                CollapseBtn = New("TextButton", {
-                    AnchorPoint = Vector2.new(1, 0.5),
-                    BackgroundTransparency = 1,
-                    Position = UDim2.new(1, -8, 0.5, 0),
-                    Size = UDim2.fromOffset(16, 16),
-                    Text = "▲",
-                    TextSize = 12,
-                    Parent = TabboxButtons,
-                })
-                local IsCollapsed = false
-                CollapseBtn.MouseButton1Click:Connect(function()
-                    IsCollapsed = not IsCollapsed
-                    CollapseBtn.Text = IsCollapsed and "▼" or "▲"
-                    
-                    -- Sembunyikan content
-                    if Tabbox.ActiveTab then
-                        Tabbox.ActiveTab.Container.Visible = not IsCollapsed
-                    end
-                    
-                    -- Resize
-                    TabboxHolder.Size = IsCollapsed 
-                        and UDim2.new(1, 0, 0, 34)  -- hanya header
-                        or UDim2.new(1, 0, 0, (List.AbsoluteContentSize.Y / Library.DPIScale) + 49)
-                end)
             end
 
             local TotalButtons, TotalTabs = 0, 1
