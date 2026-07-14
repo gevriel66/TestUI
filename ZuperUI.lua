@@ -1215,7 +1215,7 @@ getgenv().Library = {
 
         if Class == "TextLabel" or Class == "TextBox" then
             Instance.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
-            Instance.TextSize = 25
+            Instance.TextSize = 15
         end
 
         Instance.Name = "\0"
@@ -1393,7 +1393,7 @@ getgenv().Library = {
 
             Library:Create( "UIScale", {
                 Parent = Items.Menu.Instance;
-                Scale = 0.65
+                Scale = 1
             })
 
             Items.Menu.Instance.Position = UDim2.fromOffset(Items.Menu.Instance.AbsolutePosition.X, Items.Menu.Instance.AbsolutePosition.Y)
@@ -1726,7 +1726,7 @@ getgenv().Library = {
                 Items.Button = Library:Create( "Frame", {
                     Parent = self.Items.TabButtonHolder.Instance;
                     BackgroundTransparency = 1;
-                    Size = UDim2.new(1, 0, 0, 60);
+                    Size = UDim2.new(1, 0, 0, 40);
                     ZIndex = 2;
                     BorderSizePixel = 0;
                     BackgroundColor3 = Themes.Preset["TabButtons"]
